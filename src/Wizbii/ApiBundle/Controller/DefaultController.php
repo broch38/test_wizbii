@@ -35,40 +35,7 @@ class DefaultController extends Controller
             $entry->setWuui($request->cookies->get("uniqUserId"));
         }
 
-        /*$v   = $request->query->get("v");
-        $t   = $request->query->get("t");
-        $dl  = $request->query->get("dl");
-        $dr  = $request->query->get("dr");
-        $wct = $request->query->get("wct");
-        if(is_null($wct)){
-            //read from cookie
-        }
-
-        $wui = $request->query->get("wui");
-        if(is_null($wui)){
-            //read from cookie
-        }
-
-        $wuui = $request->query->get("wuui");
-        if(is_null($wuui)){
-            //read from cookie
-        }
-
-        $ec = $request->query->get("ec");
-        $ea = $request->query->get("ea");
-        $el = $request->query->get("el");
-        $ev = $request->query->get("ev");
-        $tid = $request->query->get("tid");
-        $ds = $request->query->get("ds");
-        $cn = $request->query->get("cn");
-        $cs = $request->query->get("cs");
-        $cm = $request->query->get("cm");
-        $ck = $request->query->get("ck");
-        $cc = $request->query->get("cc");
-        $sn = $request->query->get("sn");
-        $an = $request->query->get("an");
-        $av = $request->query->get("av");
-        $qt = $request->query->get("qt");*/
+        
 
         $dm = $this->get('doctrine_mongodb')->getManager();
         $repository = $dm->getRepository('WizbiiApiBundle:ApiEntry');
@@ -85,29 +52,7 @@ class DefaultController extends Controller
         {
             return new Response("");
         }
-        /*$entry = new ApiEntry();
-        $entry->setV($v);
-        $entry->setT($t);
-        $entry->setDl($dl);
-        $entry->setDr($dr);
-        $entry->setWct($wct);
-        $entry->setWui($wui);
-        $entry->setWuui($wuui);
-        $entry->setEc($ec);
-        $entry->setEa($ea);
-        $entry->setEl($el);
-        $entry->setEv($ev);
-        $entry->setTid($tid);
-        $entry->setDs($ds);
-        $entry->setCn($cn);
-        $entry->setCs($cs);
-        $entry->setCm($cm);
-        $entry->setCk($ck);
-        $entry->setCc($cc);
-        $entry->setSn($sn);
-        $entry->setAn($an);
-        $entry->setAv($av);
-        $entry->setQt($qt);*/
+
 
 
         $validator = $this->get('validator');
