@@ -1,0 +1,4 @@
+wizbii_api:
+    resource: "@WizbiiApiBundle/Controller/"
+    type:     annotation
+    prefix:   /
